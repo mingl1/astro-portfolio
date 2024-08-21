@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MyCalendar from "../components/MyCalendar";
 import Age from "../components/Age";
+import { fade } from "astro:transitions";
 // Component Imports
 // Content Fetching: List four most recent work projects
 // const projects = (await getCollection("work"))
@@ -13,10 +13,12 @@ import Age from "../components/Age";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
+
+
 ---
 
 <BaseLayout>
-  <section class="top-area narrow-width">
+  <section class="top-area narrow-width"  transition:animate={fade({duration:'2s'})}>
     <div class="content-group">
       <div class="radio-area">
         <div class="radio-player">
@@ -45,7 +47,7 @@ import Age from "../components/Age";
               role="status"
               
             >
-             <a target = "_blank" href="https://github.com/mingl1">mingl1</a>
+            <a target = "_blank" href="https://github.com/mingl1">mingl1</a>
             </div>
           </div><div class="schedule-upcoming">
             <div class="time-container is-detailed">
@@ -64,6 +66,19 @@ import Age from "../components/Age";
     </div>
   </section>
 </BaseLayout>
+
+<!-- <script is:inline>
+  document.addEventListener('astro:before-preparation', ev => {
+    const originalLoader = ev.loader;
+    ev.loader = async function() {
+      const { startSpinner } = await import('./spinner.js');
+      const stop = startSpinner();
+      await originalLoader();
+      stop();
+    };
+  });
+</script> -->
+
 <style>
   a {
     color: inherit;
