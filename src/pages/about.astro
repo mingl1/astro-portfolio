@@ -3,10 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import { fade } from 'astro:transitions';
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
+	<div class="stack gap-20" transition:animate={fade({ duration: '2s' })}>
 		<main class="wrapper about">
 			<Hero
 				title="About"
