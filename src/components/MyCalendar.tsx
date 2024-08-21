@@ -31,7 +31,7 @@ export default function MyCalender() {
   const isXLScreen = useMediaQuery({ query: "(min-width: 1644px)" });
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1400px)" });
   const isMediumScreen = useMediaQuery({ query: "(min-width: 992px)" });
-  // const isSmallScreen = useMediaQuery({ query: "(min-width: 580px)" });
+  const isSmallScreen = useMediaQuery({ query: "(min-width: 580px)" });
   if (isXLScreen)
     return (
       <GitHubCalendar
@@ -81,7 +81,7 @@ export default function MyCalender() {
         hideTotalCount
       />
     );
-  else {
+  else if (isSmallScreen) {
     return (
       <GitHubCalendar
         username="mingl1"
@@ -90,6 +90,21 @@ export default function MyCalender() {
         hideColorLegend
         blockSize={22}
         transformData={(e) => selectLastMonths(e, 4)}
+        // style={{ color: "white !important" }}
+        weekStart={myDay == 6 ? 0 : ((myDay + 1) as Day)}
+        hideMonthLabels
+        hideTotalCount
+      />
+    );
+  } else {
+    return (
+      <GitHubCalendar
+        username="mingl1"
+        blockRadius={20}
+        blockMargin={4}
+        hideColorLegend
+        blockSize={22}
+        transformData={(e) => selectLastMonths(e, 2)}
         // style={{ color: "white !important" }}
         weekStart={myDay == 6 ? 0 : ((myDay + 1) as Day)}
         hideMonthLabels
