@@ -7,24 +7,22 @@ import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
+export const prerender = false;
 
 interface Props {
 	entry: CollectionEntry<'work'>;
 }
-
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
-export async function getStaticPaths() {
-	const work = await getCollection('work');
-	return work.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
-}
 
-const { entry } = Astro.props;
+const { slug } = Astro.params;
+const work = await getCollection('work');
+const entry = work.find((e)=>e.slug==slug)
+if (!entry) return Astro.redirect("/404");
 const { Content } = await entry.render();
+
+
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -36,7 +34,7 @@ const { Content } = await entry.render();
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								{entry.data.tags.map((t: unknown) => <Pill>{t}</Pill>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
