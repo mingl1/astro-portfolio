@@ -21,7 +21,7 @@ import { fade } from "astro:transitions";
   <section class="top-area narrow-width"  transition:animate={fade({duration:'2s'})}>
     <div class="content-group">
       <div class="radio-area">
-        <div class="radio-player">
+        <!-- <div class="radio-player">
           <svg
             class="circle"
             viewBox="0 0 100 100"
@@ -39,7 +39,8 @@ import { fade } from "astro:transitions";
               ><path d="m0 0v42l34-21z" fill-rule="evenodd"></path></svg
             ></button
           ><audio src="https://netilradio.out.airtime.pro/netilradio_a"></audio>
-        </div><div class="schedule-container">
+        </div> -->
+        <div class="schedule-container">
           <div class="schedule-current">
             <div
               aria-live="polite"
@@ -52,7 +53,7 @@ import { fade } from "astro:transitions";
           </div><div class="schedule-upcoming">
             <div class="time-container is-detailed">
               <div class="time-explained">
-                <time datetime="1724194800000">Junior, 3.91</time>
+                Junior, 3.91
               </div>
               <Age client:only="react" />
 

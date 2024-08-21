@@ -5,17 +5,17 @@ const currentYear = new Date().getFullYear();
 
 <footer>
 	<div class="group">
-		<p>
+		<!-- <p>
 			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
-		</p>
+		</p> -->
 		<p>&copy; {currentYear} Ming Lin</p>
 	</div>
-	<p class="socials">
+	<!-- <p class="socials">
 		<a href="https://twitter.com/me"> Twitter</a>
 		<a href="https://github.com/me"> GitHub</a>
 		<a href="https://codepen.io/me"> CodePen</a>
-	</p>
+	</p> -->
 </footer>
 <style>
 	footer {
@@ -45,6 +45,8 @@ const currentYear = new Date().getFullYear();
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+		width:100%;
+		justify-content:center;
 	}
 
 	.socials {
