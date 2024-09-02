@@ -9,7 +9,7 @@ const { data, slug } = Astro.props.project;
 ---
 
 <a class="card" href={`/work/${slug}`}>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" style={data.position ? {objectPosition:data.position, zoom:data.zoom}:{}}  >
 	<div class="overlay">	<span class="title">{data.title}</span>
 	</div>
 </a>

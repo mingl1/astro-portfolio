@@ -32,13 +32,7 @@ const iconLinks: {
 <nav transition:animate="none">
   <div class="menu-header">
     <a href="/" class="site-title">
-      <Icon
-        icon="terminal-window"
-        color="var(--accent-regular)"
-        size="1.6em"
-        gradient
-      />
-      Ming Lin
+      <div class="w-12 h-12 bg-current sig"></div>
     </a>
     <menu-button>
       <template>
@@ -122,9 +116,9 @@ const iconLinks: {
         }
       </div>
 
-      <div class="theme-toggle hidden cursor-not-allowed z-40 bg-white">
+      <!-- <div class="theme-toggle cursor-not-allowed z-40 bg-white"> -->
         <ThemeToggle />
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </nav>
@@ -202,7 +196,10 @@ const iconLinks: {
     background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
     box-shadow: var(--shadow-md);
   }
-
+.sig{
+  -webkit-mask: url(/assets/sig.svg) no-repeat center;
+  mask: url(/assets/sig.svg) no-repeat center;
+}
   .menu-button[aria-expanded="true"] {
     color: var(--gray-0);
     background: linear-gradient(180deg, var(--gray-600), transparent),

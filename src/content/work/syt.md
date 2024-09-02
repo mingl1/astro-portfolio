@@ -1,8 +1,10 @@
 ---
-title: Markdown Mystery Tour
-publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
+title: Shareable Youtube Mixes
+publishDate: 2024-05-28 00:00:00
+img: /assets/syt.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
+# position: -250px 0
+# zoom: 12300%
 description: |
   We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
 tags:
