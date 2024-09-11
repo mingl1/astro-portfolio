@@ -12,6 +12,7 @@ export const collections = {
       img_alt: z.string().optional(),
       position: z.string().optional(),
       zoom: z.string().optional(),
+      url: z.string(),
     }),
   }),
 };

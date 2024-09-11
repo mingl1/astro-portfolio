@@ -2,6 +2,7 @@
 title: League of Lenses
 publishDate: 2024-07-02 00:00:00
 img: /assets/lol5.png
+url: https://leagueoflenses.vercel.app/
 # position: -50px 0px
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |

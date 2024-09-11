@@ -3,6 +3,7 @@ title: Shareable Youtube Mixes
 publishDate: 2024-05-28 00:00:00
 img: /assets/syt.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
+url: https://chromewebstore.google.com/detail/youtube-mix-to-shareable/obkpamjhiffmpgafaioanapphpllppmo?authuser=2&hl=en
 # position: -250px 0
 # zoom: 12300%
 description: |
