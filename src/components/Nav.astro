@@ -8,6 +8,7 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work/" },
   { label: "About", href: "/about/" },
+  { label: "Now", href: "/now/" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -117,7 +118,7 @@ const iconLinks: {
       </div>
 
       <!-- <div class="theme-toggle cursor-not-allowed z-40 bg-white"> -->
-        <ThemeToggle />
+      <ThemeToggle />
       <!-- </div> -->
     </div>
   </div>
@@ -196,10 +197,10 @@ const iconLinks: {
     background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
     box-shadow: var(--shadow-md);
   }
-.sig{
-  -webkit-mask: url(/assets/sig.svg) no-repeat center;
-  mask: url(/assets/sig.svg) no-repeat center;
-}
+  .sig {
+    -webkit-mask: url(/assets/sig.svg) no-repeat center;
+    mask: url(/assets/sig.svg) no-repeat center;
+  }
   .menu-button[aria-expanded="true"] {
     color: var(--gray-0);
     background: linear-gradient(180deg, var(--gray-600), transparent),
