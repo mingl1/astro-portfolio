@@ -1,5 +1,4 @@
 ---
-
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MyCalendar from "../components/MyCalendar";
@@ -13,12 +12,118 @@ import { fade } from "astro:transitions";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
-
-
 ---
 
 <BaseLayout>
-  <section class="top-area narrow-width"  transition:animate={fade({duration:'2s'})}>
+  <section
+    class="top-area narrow-width flex flex-col items-center justify-center"
+    transition:animate={fade({ duration: "2s" })}
+  >
+    <div class="container relative z-30 mx-auto px-4 py-16">
+      <header class="mb-16 text-center">
+        <h1>
+          <span
+            class="text-purple-500 [text-shadow:_2px_2px_0_#4C1D95] transform -skew-x-6 inline-block"
+            >Things</span
+          > by Ming
+        </h1>
+        <p>I build things.</p>
+      </header>
+      <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+        <a
+          href="https://www.findmytt.com"
+          referrerpolicy="no-referrer"
+          target="_blank"
+        >
+          <div
+            class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border border-gray-700 shadow-lg h-full rounded-md border-sh-border hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-[#2af0ea] group"
+          >
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h1>
+                FindMy<span
+                  class="text-[#fe2858] [text-shadow:_2px_2px_0_#2af0ea] transform -skew-x-12 inline-block group-hover:scale-110 transition-transform duration-300"
+                  >tt</span
+                >
+              </h1>
+              <p
+                class="group-hover:text-gray-300 transition-colors duration-300"
+              >
+                Never lose a TikTok again
+              </p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://leagueoflenses.vercel.app/"
+          referrerpolicy="no-referrer"
+          target="_blank"
+        >
+          <div
+            class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border border-gray-700 shadow-lg h-full rounded-md border-sh-border hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-amber-700 group"
+          >
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h1>
+                <span
+                  class="text-amber-700 [text-shadow:_2px_2px_0_#8B4513] transform -skew-x-6 inline-block group-hover:scale-110 transition-transform duration-300"
+                  >League</span
+                > of Lenses
+              </h1>
+              <p
+                class="group-hover:text-gray-300 transition-colors duration-300"
+              >
+                Helped me drive 100k views on my Youtube channel
+              </p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://chromewebstore.google.com/detail/youtube-mix-to-shareable/obkpamjhiffmpgafaioanapphpllppmo?authuser=1&hl=en"
+          referrerpolicy="no-referrer"
+          target="_blank"
+        >
+          <div
+            class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border border-gray-700 shadow-lg h-full rounded-md border-sh-border hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-red-600 group"
+          >
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h1>
+                <span
+                  class="text-red-600 [text-shadow:_2px_2px_0_#8B0000] transform -skew-x-6 inline-block group-hover:scale-110 transition-transform duration-300"
+                  >YouTube</span
+                > Mix Converter
+              </h1>
+              <p
+                class="group-hover:text-gray-300 transition-colors duration-300"
+              >
+                Share YT Mixes with friends, bots and yt-dlp
+              </p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://www.findmytt.com"
+          referrerpolicy="no-referrer"
+          target="_blank"
+        >
+          <div
+            class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border border-gray-700 shadow-lg h-full rounded-md border-sh-border hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-blue-500 group"
+          >
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h1>
+                Page<span
+                  class="text-blue-500 [text-shadow:_2px_2px_0_#1E3A8A] transform -skew-x-6 inline-block group-hover:scale-110 transition-transform duration-300"
+                  >Mark</span
+                >
+              </h1>
+              <p
+                class="group-hover:text-gray-300 transition-colors duration-300"
+              >
+                Organize your bookmarks
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
     <div class="content-group">
       <div class="radio-area">
         <!-- <div class="radio-player">
@@ -40,23 +145,21 @@ import { fade } from "astro:transitions";
             ></button
           ><audio src="https://netilradio.out.airtime.pro/netilradio_a"></audio>
         </div> -->
+
         <div class="schedule-container">
           <div class="schedule-current">
             <div
               aria-live="polite"
               class="schedule-title alpha is-live"
               role="status"
-              
             >
-            <a target = "_blank" href="https://github.com/mingl1">mingl1</a>
+              <a target="_blank" href="https://github.com/mingl1">mingl1</a>
             </div>
-          </div><div class="schedule-upcoming">
+          </div>
+          <div class="schedule-upcoming">
             <div class="time-container is-detailed">
-              <div class="time-explained">
-                Junior, 3.91
-              </div>
+              <div class="time-explained">Junior, 3.91</div>
               <Age client:only="react" />
-
             </div><div class="schedule-next-title">CSE & AMS @ SBU</div>
           </div>
         </div>
